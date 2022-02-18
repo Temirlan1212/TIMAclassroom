@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import UserContextProvider from "./context/MainContext";
+import Form from "./Form/Form";
+import Home from "./Home/Home";
+import Ingredients from "./Ingredients/Ingredients";
+import Receipts from "./Receipts/Receipts";
+import MainRoutes from "./routes/MainRoutes";
 
 function App() {
+  const [meal, setMeal] = useState("");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <Counter /> */}
+      {/* <Receipts meal={meal} setMeal={setMeal} />
+      <Ingredients meal={meal} /> */}
+      <UserContextProvider>
+        <MainRoutes />
+      </UserContextProvider>
     </div>
   );
 }
