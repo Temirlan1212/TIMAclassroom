@@ -1,1 +1,11 @@
+body {
+  background-image: url("https://images.unsplash.com/photo-1487147264018-f937fba0c817?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YmFja2dyb3VuZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
+  background-position: center;
+}
 
+.contact-list-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* background-color: rgba(255, 255, 255, 0.2); */
+}

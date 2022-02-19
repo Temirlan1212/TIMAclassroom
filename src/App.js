@@ -1,6 +1,9 @@
 import { useState } from "react";
 import "./App.css";
-import UserContextProvider from "./context/MainContext";
+import ContactsContextProvider from "./contexts/ContactsContext";
+
+import UserContextProvider from "./contexts/FormContext";
+
 import Form from "./Form/Form";
 import Home from "./Home/Home";
 import Ingredients from "./Ingredients/Ingredients";
@@ -15,9 +18,13 @@ function App() {
       {/* <Counter /> */}
       {/* <Receipts meal={meal} setMeal={setMeal} />
       <Ingredients meal={meal} /> */}
-      <UserContextProvider>
+      {/* <UserContextProvider>
         <MainRoutes />
-      </UserContextProvider>
+      </UserContextProvider> */}
+
+      <ContactsContextProvider>
+        <MainRoutes />
+      </ContactsContextProvider>
     </div>
   );
 }
